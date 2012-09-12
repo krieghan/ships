@@ -1,5 +1,5 @@
 {
     "code" : ["./NGCore/Client/Legacy.js",
               "./src/Main.js"],
-    "other" : ["./assets/background.png"]
+    "textures": ["./Content/*.png"]
 }

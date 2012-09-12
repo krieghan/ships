@@ -1,6 +1,1 @@
-{
-    "platformEnv" : "sandbox",
-    "appId" : "MyHelloWorld",
-    "appVerifier" : "aik9zin4mokalmkd",
-    "requiremobagelogin" : false
-}
+{"AD_ID":"HELLOWORLD_ADID", "noBackgroundUpdates": true}

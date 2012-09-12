@@ -1,16 +1,18 @@
-var Core = require('../NGCore/Client/Core');
-var GL2 = require('../NGCore/Client/GL2');
-var UI = require('../NGCore/Client/UI');
+var Core = require('../NGCore/Client/Core').Core;
+var GL2 = require('../NGCore/Client/GL2').GL2;
+var UI = require('../NGCore/Client/UI').UI;
 
-console.log('parsing Main.js');
+console.log('parsing Main.js 2');
 
-/*
-
-var addBackgroundImage = function(width, height)
+var loadBackground = function(width, height)
 {
-    var bgSprite = new GL2.Sprite();
-    bgSprite.setImage("assets/background.png", [width, height], [0, 0]);
-    GL2.Root.addChild(bgSprite);
+    this._backdrop = new GL2.Primitive();
+    this._backdrop.setType(GL2.Primitive.Type.TriangleFan);
+    this._backdrop.pushVertex(new GL2.Primitive.Vertex([0, 0], [0, 0], [0, 0, 0]));
+    this._backdrop.pushVertex(new GL2.Primitive.Vertex([width, 0], [0, 0], [0, 0, 0]));
+    this._backdrop.pushVertex(new GL2.Primitive.Vertex([width, height], [0, 0], [0, 0, 0]));
+    this._backdrop.pushVertex(new GL2.Primitive.Vertex([0, height], [0, 0], [0, 0, 0]));
+    GL2.Root.addChild(this._backdrop);
 }
 
 var addText = function(width, height)
@@ -23,13 +25,10 @@ var addText = function(width, height)
     GL2.Root.addChild(label);
 }
 
-*/
-
 function main()
 {
     console.log('starting main');
     
-    /*
     var glView = new UI.GLView();
     var width = UI.Window.getWidth();
     var height = UI.Window.getHeight();
@@ -38,10 +37,9 @@ function main()
     glView.setOnLoad(function()
     {
         console.log('adding background');
-        addBackgroundImage(width, height);
+        loadBackground(width, height);
         addText(width, height);
     });
     
     glView.setActive(true);
-    */
 }
